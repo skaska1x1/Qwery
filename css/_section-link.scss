@@ -1,0 +1,12 @@
+$link-color: #FBD784;
+.section__link {
+    font-weight: 700;
+    line-height: 25px;
+    a{
+        color: $link-color;
+        margin-right: 9px;
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+}
