@@ -1,281 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qwery</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body >
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
     <header class="header">
-
-        <div class="header__top">
-            <div class="header__logo">QWERy</div>
-            <div class="header__burger">
-                <span class="header__burger-line"></span>
-            </div>
-            <nav class="header__nav">
-                <ul class="header__list">
-                    <li class="header__item">
-                        <a href="#" class="header__link">Information</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#" class="header__link">About us</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#" class="header__link last-link">Culture</a>
-                    </li>
-                </ul>
-                
-            </nav>
-            <div class="header__top-search">
-                <svg  width="20" height="20"  viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.564 16.3392L10.8015 11.5759C8.68288 13.0821 5.76352 12.7136 4.08555 10.7283C2.40758 8.74294 2.53079 5.80301 4.36899 3.96502C6.2067 2.12622 9.14693 2.00248 11.1326 3.68036C13.1184 5.35825 13.487 8.27789 11.9807 10.3967L16.7432 15.16L15.5648 16.3384L15.564 16.3392ZM7.90399 4.16667C6.32374 4.16632 4.9604 5.27558 4.63938 6.82288C4.31837 8.37018 5.12791 9.93024 6.57788 10.5585C8.02786 11.1869 9.71974 10.7107 10.6292 9.41839C11.5386 8.12608 11.4157 6.37278 10.3348 5.22002L10.839 5.72002L10.2707 5.15335L10.2607 5.14335C9.63714 4.516 8.78848 4.16429 7.90399 4.16667Z" fill="rgba(255, 255, 255, 0.5)"/>
-                </svg> 
-                <input class="header__input"   placeholder="Search"> <label class="header__input-label" for="before"></label>
-            </div>
+      <div class="header__top">
+        <div class="header__logo">QWERy</div>
+        <div class="header__burger">
+          <span class="header__burger-line"></span>
         </div>
-        
-        <div class="header__row">
-
-            <div class="header__social">
-                <p class="header__social-text">Follow us</p>
-                <a class="header__social-link" href="https://www.instagram.com/" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="https://www.google.ru/">
-                        <path d="M7.8 2.00003H16.2C19.4032 2.00003 22 4.59678 22 7.80003V16.2C22 19.4033 19.4032 22 16.2 22H7.8C4.59675 22 2 19.4033 2 16.2V7.80003C2 4.59678 4.59675 2.00003 7.8 2.00003ZM7.6 4.00001C5.61177 4.00001 4 5.61179 4 7.60001V16.4C4 18.3882 5.61177 20 7.6 20H16.4C18.3882 20 20 18.3882 20 16.4V7.60001C20 5.61179 18.3882 4.00001 16.4 4.00001H7.6ZM17.25 5.50001C17.9404 5.50001 18.5 6.05966 18.5 6.75001C18.5 7.44037 17.9404 8.00001 17.25 8.00001C16.5596 8.00001 16 7.44037 16 6.75001C16 6.05966 16.5596 5.50001 17.25 5.50001ZM12 7.00001C14.7614 7.00001 17 9.23859 17 12C17 14.7614 14.7614 17 12 17C9.23857 17 7 14.7614 7 12C7 9.23859 9.23857 7.00001 12 7.00001ZM12 9.00001C10.3431 9.00001 9 10.3432 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3432 13.6569 9.00001 12 9.00001Z" fill="white"/>
-                    </svg>
-                </a>
-                <a class="header__social-link" href="http://twitter.com/"  target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.9184 6.01238C22.1488 6.35373 21.3216 6.58442 20.4536 6.68815C21.3395 6.15701 22.0201 5.31598 22.3405 4.31378C21.5112 4.80564 20.5928 5.16278 19.6152 5.3552C18.8324 4.52112 17.7171 4 16.4827 4C14.1126 4 12.1909 5.92147 12.1909 8.29155C12.1909 8.6279 12.2289 8.95546 12.3021 9.2696C8.73532 9.0906 5.57298 7.38203 3.45632 4.78551C3.08688 5.41935 2.87524 6.15656 2.87524 6.94309C2.87524 8.43204 3.63287 9.74563 4.78446 10.5153C4.08102 10.4929 3.41919 10.2999 2.84062 9.97846C2.84021 9.99639 2.84021 10.0143 2.84021 10.0324C2.84021 12.1118 4.31956 13.8463 6.28282 14.2406C5.92272 14.3387 5.54357 14.3912 5.15217 14.3912C4.87563 14.3912 4.60678 14.3642 4.34469 14.3142C4.89084 16.0191 6.47576 17.26 8.35377 17.2945C6.88499 18.4457 5.0345 19.1318 3.02376 19.1318C2.67735 19.1318 2.33574 19.1114 2 19.0717C3.89926 20.2894 6.15514 21 8.57873 21C16.4726 21 20.7894 14.4605 20.7894 8.78918C20.7894 8.60314 20.7852 8.41805 20.7769 8.23395C21.6155 7.62886 22.3431 6.87302 22.9184 6.01238Z" fill="white"/>
-                    </svg>
-                </a>
-                <a class="header__social-link link-f" href="https://facebook.com/"  target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_24_12)">
-                        <path d="M14.9917 5.81896H17V2.16196C16.6535 2.11212 15.462 2 14.0742 2C11.1787 2 9.19523 3.90421 9.19523 7.40404V10.625H6V14.7132H9.19523V25H13.1127V14.7142H16.1787L16.6654 10.626H13.1118V7.80942C13.1127 6.62779 13.417 5.81896 14.9917 5.81896Z" fill="white"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_24_12">
-                        <rect width="24" height="24" fill="white"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
-                </a>
-            </div>
-
-            <div class="header__title-box">
-                <div class="title-box">
-                    <svg class="title-box__svg" width="72" height="2" viewBox="0 0 72 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="72" height="2" fill="#FFC178"/>
-                    </svg>
-                    <div class="title-text">explore the Nature Beauty</div>
-                </div>
-                
-                <div class="header__title">
-                    <h1 class="header__title-bold">Discover</h1>
-                    <h1 class="header__title-regular">Wonderful Indonesia</h1>
-                </div>
-                <div class="header__scroll">
-                    <p class="header__scroll-text">Scroll down</p>
-                    <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 16L14.59 14.59L9 20.17V0H7V20.17L1.42 14.58L0 16L8 24L16 16Z" fill="white"/>
-                    </svg>
-                </div>
-            </div>
-
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#" class="header__link">Information</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">About us</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link last-link">Culture</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__top-search">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.564 16.3392L10.8015 11.5759C8.68288 13.0821 5.76352 12.7136 4.08555 10.7283C2.40758 8.74294 2.53079 5.80301 4.36899 3.96502C6.2067 2.12622 9.14693 2.00248 11.1326 3.68036C13.1184 5.35825 13.487 8.27789 11.9807 10.3967L16.7432 15.16L15.5648 16.3384L15.564 16.3392ZM7.90399 4.16667C6.32374 4.16632 4.9604 5.27558 4.63938 6.82288C4.31837 8.37018 5.12791 9.93024 6.57788 10.5585C8.02786 11.1869 9.71974 10.7107 10.6292 9.41839C11.5386 8.12608 11.4157 6.37278 10.3348 5.22002L10.839 5.72002L10.2707 5.15335L10.2607 5.14335C9.63714 4.516 8.78848 4.16429 7.90399 4.16667Z"
+              fill="rgba(255, 255, 255, 0.5)"
+            />
+          </svg>
+          <input class="header__input" placeholder="Search" />
+          <label class="header__input-label" for="before"></label>
         </div>
-        
+      </div>
+
+      <div class="header__row">
+        <div class="header__social">
+          <p class="header__social-text">Follow us</p>
+          <a
+            class="header__social-link"
+            href="https://www.instagram.com/"
+            target="_blank"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="https://www.google.ru/"
+            >
+              <path
+                d="M7.8 2.00003H16.2C19.4032 2.00003 22 4.59678 22 7.80003V16.2C22 19.4033 19.4032 22 16.2 22H7.8C4.59675 22 2 19.4033 2 16.2V7.80003C2 4.59678 4.59675 2.00003 7.8 2.00003ZM7.6 4.00001C5.61177 4.00001 4 5.61179 4 7.60001V16.4C4 18.3882 5.61177 20 7.6 20H16.4C18.3882 20 20 18.3882 20 16.4V7.60001C20 5.61179 18.3882 4.00001 16.4 4.00001H7.6ZM17.25 5.50001C17.9404 5.50001 18.5 6.05966 18.5 6.75001C18.5 7.44037 17.9404 8.00001 17.25 8.00001C16.5596 8.00001 16 7.44037 16 6.75001C16 6.05966 16.5596 5.50001 17.25 5.50001ZM12 7.00001C14.7614 7.00001 17 9.23859 17 12C17 14.7614 14.7614 17 12 17C9.23857 17 7 14.7614 7 12C7 9.23859 9.23857 7.00001 12 7.00001ZM12 9.00001C10.3431 9.00001 9 10.3432 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3432 13.6569 9.00001 12 9.00001Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+          <a
+            class="header__social-link"
+            href="http://twitter.com/"
+            target="_blank"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22.9184 6.01238C22.1488 6.35373 21.3216 6.58442 20.4536 6.68815C21.3395 6.15701 22.0201 5.31598 22.3405 4.31378C21.5112 4.80564 20.5928 5.16278 19.6152 5.3552C18.8324 4.52112 17.7171 4 16.4827 4C14.1126 4 12.1909 5.92147 12.1909 8.29155C12.1909 8.6279 12.2289 8.95546 12.3021 9.2696C8.73532 9.0906 5.57298 7.38203 3.45632 4.78551C3.08688 5.41935 2.87524 6.15656 2.87524 6.94309C2.87524 8.43204 3.63287 9.74563 4.78446 10.5153C4.08102 10.4929 3.41919 10.2999 2.84062 9.97846C2.84021 9.99639 2.84021 10.0143 2.84021 10.0324C2.84021 12.1118 4.31956 13.8463 6.28282 14.2406C5.92272 14.3387 5.54357 14.3912 5.15217 14.3912C4.87563 14.3912 4.60678 14.3642 4.34469 14.3142C4.89084 16.0191 6.47576 17.26 8.35377 17.2945C6.88499 18.4457 5.0345 19.1318 3.02376 19.1318C2.67735 19.1318 2.33574 19.1114 2 19.0717C3.89926 20.2894 6.15514 21 8.57873 21C16.4726 21 20.7894 14.4605 20.7894 8.78918C20.7894 8.60314 20.7852 8.41805 20.7769 8.23395C21.6155 7.62886 22.3431 6.87302 22.9184 6.01238Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+          <a
+            class="header__social-link link-f"
+            href="https://facebook.com/"
+            target="_blank"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_24_12)">
+                <path
+                  d="M14.9917 5.81896H17V2.16196C16.6535 2.11212 15.462 2 14.0742 2C11.1787 2 9.19523 3.90421 9.19523 7.40404V10.625H6V14.7132H9.19523V25H13.1127V14.7142H16.1787L16.6654 10.626H13.1118V7.80942C13.1127 6.62779 13.417 5.81896 14.9917 5.81896Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_24_12">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+
+        <div class="header__title-box">
+          <div class="title-box">
+            <svg
+              class="title-box__svg"
+              width="72"
+              height="2"
+              viewBox="0 0 72 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="72" height="2" fill="#FFC178" />
+            </svg>
+            <div class="title-text">explore the Nature Beauty</div>
+          </div>
+
+          <div class="header__title">
+            <h1 class="header__title-bold">Discover</h1>
+            <h1 class="header__title-regular">Wonderful Indonesia</h1>
+          </div>
+          <div class="header__scroll">
+            <p class="header__scroll-text">Scroll down</p>
+            <svg
+              width="16"
+              height="24"
+              viewBox="0 0 16 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 16L14.59 14.59L9 20.17V0H7V20.17L1.42 14.58L0 16L8 24L16 16Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
     </header>
 
-
     <main>
+      <div class="container">
+        <section class="section1">
+          <img
+            class="section1__img"
+            src="./img/sectoin1Image1.jpg"
+            alt="sectoin1Image"
+          />
+          <div class="section1__col">
+            <div class="title-box">
+              <svg
+                class="title-box__svg"
+                width="72"
+                height="2"
+                viewBox="0 0 72 2"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="72" height="2" fill="#FFC178" />
+              </svg>
+              <div class="title-text">east nusa tenggara</div>
+            </div>
+            <h2 class="section1__title">Have you enjoyed your holiday?</h2>
+            <div class="section1__desc">
+              You will be amazed if you take part in this sailing Komodo island
+              tour package. So it is also mandatory for you, besides enjoying
+              Komodo tourism on Komodo Island, you also have to taste the marine
+              tourism. The beautiful waters of Komodo will make you meet many
+              travelers from other countries.
+            </div>
+            <div class="section__link">
+              <a href="#">read more</a>
+              <svg
+                width="25"
+                height="16"
+                viewBox="0 0 25 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.5 -6.99382e-07L15.09 1.41L20.67 7L0.5 7L0.5 9L20.67 9L15.08 14.58L16.5 16L24.5 8L16.5 -6.99382e-07Z"
+                  fill="#FBD784"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
 
-        <div class="container">
+        <section class="section2-slider">
+          <div class="section2-slider__line">
+            <div class="title-box">
+              <svg
+                class="title-box__svg"
+                width="72"
+                height="2"
+                viewBox="0 0 72 2"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="72" height="2" fill="#FFC178" />
+              </svg>
+              <div class="title-text">Bromo</div>
+              <svg
+                class="title-box__svg"
+                width="72"
+                height="2"
+                viewBox="0 0 72 2"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="72" height="2" fill="#FFC178" />
+              </svg>
+            </div>
+            <h2 class="section2-slider__title">
+              Steady your steps, we will climb together!
+            </h2>
+            <p class="section2-slider__desc">
+              Enjoying the vast expanse of the sea of ​​​​sand, witnessing the
+              splendor of Mount Semeru that soars into the sky, and gazing at
+              the beauty of the sun moving out of its bed or otherwise enjoying
+              the dim twilight from the Bromo ridge is an unforgettable
+              experience when visiting Bromo.
+            </p>
+            <div class="section__link section2-link">
+              <a href="#">read more</a>
+              <svg
+                width="25"
+                height="16"
+                viewBox="0 0 25 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.5 -6.99382e-07L15.09 1.41L20.67 7L0.5 7L0.5 9L20.67 9L15.08 14.58L16.5 16L24.5 8L16.5 -6.99382e-07Z"
+                  fill="#FBD784"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
 
-            <section class="section1">
-                <img class="section1__img" src="./img/sectoin1Image1.jpg" alt="sectoin1Image">
-                <div class="section1__col">
-                    <div class="title-box">
-                        <svg class="title-box__svg" width="72" height="2" viewBox="0 0 72 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="72" height="2" fill="#FFC178"/>
-                        </svg>
-                        <div class="title-text">east nusa tenggara</div>
-                    </div>
-                    <h2 class="section1__title">Have you enjoyed your holiday?</h2>
-                    <div class="section1__desc">
-                        You will be amazed if you take part in this sailing Komodo island tour package. So it is also mandatory for you, besides enjoying Komodo tourism on Komodo Island, you also have to taste the marine tourism.  The beautiful waters of Komodo will make you meet many travelers from other countries.
-                    </div>
-                    <div class="section__link">
-                        <a href="#">read more</a>
-                        <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.5 -6.99382e-07L15.09 1.41L20.67 7L0.5 7L0.5 9L20.67 9L15.08 14.58L16.5 16L24.5 8L16.5 -6.99382e-07Z" fill="#FBD784"/>
-                        </svg>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="section2-slider">
-                <div class="section2-slider__line">
-                    <div class="title-box">
-                        <svg class="title-box__svg" width="72" height="2" viewBox="0 0 72 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="72" height="2" fill="#FFC178"/>
-                        </svg>
-                        <div class="title-text">Bromo</div>
-                        <svg class="title-box__svg" width="72" height="2" viewBox="0 0 72 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="72" height="2" fill="#FFC178"/>
-                        </svg>
-                    </div>
-                    <h2 class="section2-slider__title">
-                        Steady your steps, we will climb together!
-                    </h2>
-                    <p class="section2-slider__desc">
-                        Enjoying the vast expanse of the sea of ​​​​sand, witnessing the splendor of Mount Semeru that soars into the sky, and gazing at the beauty of the sun moving out of its bed or otherwise enjoying the dim twilight from the Bromo ridge is an unforgettable experience when visiting Bromo.
-                    </p>
-                    <div class="section__link section2-link">
-                        <a href="#">read more</a>
-                        <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.5 -6.99382e-07L15.09 1.41L20.67 7L0.5 7L0.5 9L20.67 9L15.08 14.58L16.5 16L24.5 8L16.5 -6.99382e-07Z" fill="#FBD784"/>
-                        </svg>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="section1">
-                <div class="section1__col">
-                    <div class="title-box">
-                        <svg class="title-box__svg" width="72" height="2" viewBox="0 0 72 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="72" height="2" fill="#FFC178"/>
-                        </svg>
-                        <div class="title-text">Indonesian culture</div>
-                    </div>
-                    <h2 class="section1__title">Our culture here is very friendly <br> to people</h2>
-                    <div class="section1__desc section3__desc">
-                        known for his politeness, manners and gentleness. This becomes a characteristic when they mingle with other tribes and become basic traits that are passed down by their ancestors.
-                    </div>
-                    <div class="section__link ">
-                        <a href="#">read more</a>
-                        <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.5 -6.99382e-07L15.09 1.41L20.67 7L0.5 7L0.5 9L20.67 9L15.08 14.58L16.5 16L24.5 8L16.5 -6.99382e-07Z" fill="#FBD784"/>
-                        </svg>
-                    </div>
-                </div>
-                <img class="section3__img" src="./img/section3Image1.jpg" alt="">
-            </section>
-
-        </div>
-
+        <section class="section1">
+          <div class="section1__col">
+            <div class="title-box">
+              <svg
+                class="title-box__svg"
+                width="72"
+                height="2"
+                viewBox="0 0 72 2"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="72" height="2" fill="#FFC178" />
+              </svg>
+              <div class="title-text">Indonesian culture</div>
+            </div>
+            <h2 class="section1__title">
+              Our culture here is very friendly <br />
+              to people
+            </h2>
+            <div class="section1__desc section3__desc">
+              known for his politeness, manners and gentleness. This becomes a
+              characteristic when they mingle with other tribes and become basic
+              traits that are passed down by their ancestors.
+            </div>
+            <div class="section__link">
+              <a href="#">read more</a>
+              <svg
+                width="25"
+                height="16"
+                viewBox="0 0 25 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.5 -6.99382e-07L15.09 1.41L20.67 7L0.5 7L0.5 9L20.67 9L15.08 14.58L16.5 16L24.5 8L16.5 -6.99382e-07Z"
+                  fill="#FBD784"
+                />
+              </svg>
+            </div>
+          </div>
+          <img class="section3__img" src="./img/section3Image1.jpg" alt="" />
+        </section>
+      </div>
     </main>
 
-
     <footer>
-
-        <div class="container">
-
-            <div class="footer__top">
-                <p class="footer__top-logo">QWERy</p>
-                <p class="footer__top-text">Ready to explore?</p>
-                <button class="footer__top-btn">Get started</button>
-            </div>
-    
-            <div class="footer__middle">
-                <div class="footer__middle-inner">
-                    <div class="footer__middle-col1">
-                        <div class="footer__middle-title">Let's go on vacation, Make your day</div>
-                        <input class="footer__middle-col1-input"  placeholder="Email address" > 
-                        <label class="footer__middle-col1-label" for="after"></label>
-                    </div>
-                    <div class="footer__middle-col2">
-                        <ul class="footer__middle-list">
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link first-link" href="#">Services</a> 
-                            </li>
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link" href="#">Email Marketing</a>
-                            </li>
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link" href="#">Campaigns</a>
-                            </li>
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link" href="#">Branding</a>
-                            </li>
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link" href="#">Offline</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__middle-col3">
-                        <ul class="footer__middle-list">
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link first-link" href="#">About</a> 
-                            </li>
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link" href="#">Our Story</a>
-                            </li>
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link" href="#">Benefits</a>
-                            </li>
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link" href="#">Team</a>
-                            </li>
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link" href="#">Careers</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__middle-col4">
-                        <ul class="footer__middle-list">
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link first-link" href="#">Help</a> 
-                            </li>
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link" href="#">FAQs</a>
-                            </li>
-                            <li class="footer__middle-item">
-                                <a class="footer__middle-link" href="#">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="footer__bottom">
-                <div class="footer__bottom-info">
-                    <div class="footer__bottom-text">
-                        <p class="footer__bottom-text1">Terms & Conditions</p>
-                        <p class="footer__bottom-text2">Privacy Policy</p>
-                    </div>
-                    
-                    <div class="footer__social">
-                        <a href="https://www.instagram.com/" target="_blank">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="https://www.google.ru/">
-                                <path d="M7.8 2.00003H16.2C19.4032 2.00003 22 4.59678 22 7.80003V16.2C22 19.4033 19.4032 22 16.2 22H7.8C4.59675 22 2 19.4033 2 16.2V7.80003C2 4.59678 4.59675 2.00003 7.8 2.00003ZM7.6 4.00001C5.61177 4.00001 4 5.61179 4 7.60001V16.4C4 18.3882 5.61177 20 7.6 20H16.4C18.3882 20 20 18.3882 20 16.4V7.60001C20 5.61179 18.3882 4.00001 16.4 4.00001H7.6ZM17.25 5.50001C17.9404 5.50001 18.5 6.05966 18.5 6.75001C18.5 7.44037 17.9404 8.00001 17.25 8.00001C16.5596 8.00001 16 7.44037 16 6.75001C16 6.05966 16.5596 5.50001 17.25 5.50001ZM12 7.00001C14.7614 7.00001 17 9.23859 17 12C17 14.7614 14.7614 17 12 17C9.23857 17 7 14.7614 7 12C7 9.23859 9.23857 7.00001 12 7.00001ZM12 9.00001C10.3431 9.00001 9 10.3432 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3432 13.6569 9.00001 12 9.00001Z" fill="white"/>
-                            </svg>
-                        </a>
-                        <a href="http://twitter.com/"  target="_blank">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.9184 6.01238C22.1488 6.35373 21.3216 6.58442 20.4536 6.68815C21.3395 6.15701 22.0201 5.31598 22.3405 4.31378C21.5112 4.80564 20.5928 5.16278 19.6152 5.3552C18.8324 4.52112 17.7171 4 16.4827 4C14.1126 4 12.1909 5.92147 12.1909 8.29155C12.1909 8.6279 12.2289 8.95546 12.3021 9.2696C8.73532 9.0906 5.57298 7.38203 3.45632 4.78551C3.08688 5.41935 2.87524 6.15656 2.87524 6.94309C2.87524 8.43204 3.63287 9.74563 4.78446 10.5153C4.08102 10.4929 3.41919 10.2999 2.84062 9.97846C2.84021 9.99639 2.84021 10.0143 2.84021 10.0324C2.84021 12.1118 4.31956 13.8463 6.28282 14.2406C5.92272 14.3387 5.54357 14.3912 5.15217 14.3912C4.87563 14.3912 4.60678 14.3642 4.34469 14.3142C4.89084 16.0191 6.47576 17.26 8.35377 17.2945C6.88499 18.4457 5.0345 19.1318 3.02376 19.1318C2.67735 19.1318 2.33574 19.1114 2 19.0717C3.89926 20.2894 6.15514 21 8.57873 21C16.4726 21 20.7894 14.4605 20.7894 8.78918C20.7894 8.60314 20.7852 8.41805 20.7769 8.23395C21.6155 7.62886 22.3431 6.87302 22.9184 6.01238Z" fill="white"/>
-                            </svg>
-                        </a>
-                        <a href="https://facebook.com/"  target="_blank">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_24_12)">
-                                <path d="M14.9917 5.81896H17V2.16196C16.6535 2.11212 15.462 2 14.0742 2C11.1787 2 9.19523 3.90421 9.19523 7.40404V10.625H6V14.7132H9.19523V25H13.1127V14.7142H16.1787L16.6654 10.626H13.1118V7.80942C13.1127 6.62779 13.417 5.81896 14.9917 5.81896Z" fill="white"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_24_12">
-                                <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+      <div class="container">
+        <div class="footer__top">
+          <p class="footer__top-logo">QWERy</p>
+          <p class="footer__top-text">Ready to explore?</p>
+          <button class="footer__top-btn">Get started</button>
         </div>
 
+        <div class="footer__middle">
+          <div class="footer__middle-inner">
+            <div class="footer__middle-col1 mb5">
+              <div class="footer__middle-title">
+                Let's go on vacation, Make your day
+              </div>
+              <input
+                class="footer__middle-col1-input"
+                placeholder="Email address"
+              />
+              <label class="footer__middle-col1-label" for="after"></label>
+            </div>
+            <div class="footer__middle-col2 mb5">
+              <ul class="footer__middle-list">
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link first-link" href="#"
+                    >Services</a
+                  >
+                </li>
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link" href="#">Email Marketing</a>
+                </li>
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link" href="#">Campaigns</a>
+                </li>
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link" href="#">Branding</a>
+                </li>
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link" href="#">Offline</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__middle-col3 mb5">
+              <ul class="footer__middle-list">
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link first-link" href="#">About</a>
+                </li>
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link" href="#">Our Story</a>
+                </li>
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link" href="#">Benefits</a>
+                </li>
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link" href="#">Team</a>
+                </li>
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link" href="#">Careers</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__middle-col4 mb5">
+              <ul class="footer__middle-list">
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link first-link" href="#">Help</a>
+                </li>
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link" href="#">FAQs</a>
+                </li>
+                <li class="footer__middle-item">
+                  <a class="footer__middle-link" href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__bottom-info">
+            <div class="footer__bottom-text mb5">
+              <p class="footer__bottom-text1 mb2">Terms & Conditions</p>
+              <p class="footer__bottom-text2">Privacy Policy</p>
+            </div>
+
+            <div class="footer__social">
+              <a href="https://www.instagram.com/" target="_blank">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="https://www.google.ru/"
+                >
+                  <path
+                    d="M7.8 2.00003H16.2C19.4032 2.00003 22 4.59678 22 7.80003V16.2C22 19.4033 19.4032 22 16.2 22H7.8C4.59675 22 2 19.4033 2 16.2V7.80003C2 4.59678 4.59675 2.00003 7.8 2.00003ZM7.6 4.00001C5.61177 4.00001 4 5.61179 4 7.60001V16.4C4 18.3882 5.61177 20 7.6 20H16.4C18.3882 20 20 18.3882 20 16.4V7.60001C20 5.61179 18.3882 4.00001 16.4 4.00001H7.6ZM17.25 5.50001C17.9404 5.50001 18.5 6.05966 18.5 6.75001C18.5 7.44037 17.9404 8.00001 17.25 8.00001C16.5596 8.00001 16 7.44037 16 6.75001C16 6.05966 16.5596 5.50001 17.25 5.50001ZM12 7.00001C14.7614 7.00001 17 9.23859 17 12C17 14.7614 14.7614 17 12 17C9.23857 17 7 14.7614 7 12C7 9.23859 9.23857 7.00001 12 7.00001ZM12 9.00001C10.3431 9.00001 9 10.3432 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3432 13.6569 9.00001 12 9.00001Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+              <a href="http://twitter.com/" target="_blank">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.9184 6.01238C22.1488 6.35373 21.3216 6.58442 20.4536 6.68815C21.3395 6.15701 22.0201 5.31598 22.3405 4.31378C21.5112 4.80564 20.5928 5.16278 19.6152 5.3552C18.8324 4.52112 17.7171 4 16.4827 4C14.1126 4 12.1909 5.92147 12.1909 8.29155C12.1909 8.6279 12.2289 8.95546 12.3021 9.2696C8.73532 9.0906 5.57298 7.38203 3.45632 4.78551C3.08688 5.41935 2.87524 6.15656 2.87524 6.94309C2.87524 8.43204 3.63287 9.74563 4.78446 10.5153C4.08102 10.4929 3.41919 10.2999 2.84062 9.97846C2.84021 9.99639 2.84021 10.0143 2.84021 10.0324C2.84021 12.1118 4.31956 13.8463 6.28282 14.2406C5.92272 14.3387 5.54357 14.3912 5.15217 14.3912C4.87563 14.3912 4.60678 14.3642 4.34469 14.3142C4.89084 16.0191 6.47576 17.26 8.35377 17.2945C6.88499 18.4457 5.0345 19.1318 3.02376 19.1318C2.67735 19.1318 2.33574 19.1114 2 19.0717C3.89926 20.2894 6.15514 21 8.57873 21C16.4726 21 20.7894 14.4605 20.7894 8.78918C20.7894 8.60314 20.7852 8.41805 20.7769 8.23395C21.6155 7.62886 22.3431 6.87302 22.9184 6.01238Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+              <a href="https://facebook.com/" target="_blank">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_24_12)">
+                    <path
+                      d="M14.9917 5.81896H17V2.16196C16.6535 2.11212 15.462 2 14.0742 2C11.1787 2 9.19523 3.90421 9.19523 7.40404V10.625H6V14.7132H9.19523V25H13.1127V14.7142H16.1787L16.6654 10.626H13.1118V7.80942C13.1127 6.62779 13.417 5.81896 14.9917 5.81896Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_24_12">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
