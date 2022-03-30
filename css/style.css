@@ -119,10 +119,28 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 1s;
 }
 .header__top-search-svg {
   position: absolute;
   cursor: pointer;
+}
+.header__top-search:hover::after {
+  width: 75%;
+  height: 35px;
+  content: "Введите запрос";
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 8px 2px;
+  position: absolute;
+  z-index: 11;
+  left: -10px;
+  right: 0;
+  bottom: -200%;
+  background: #8a817b;
+  border-radius: 3%;
+  color: #fff;
 }
 .header__top-search .header__input {
   padding-left: 19px;
@@ -284,15 +302,16 @@ body {
     background-color: #978b82;
   }
   .header__top .header__nav .header__list {
-    position: absolute;
-    right: 0;
-    margin-top: 5px;
-    display: flex;
     flex-direction: column;
     justify-content: start;
+    text-align: center;
+    margin: 30px auto;
   }
   .header__top .header__nav .header__list .header__item {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+  }
+  .header__top .header__nav .header__list .header__item .header__link {
+    margin: 0 auto;
   }
   .header__top .header__nav .header__list .header__item .header__link:hover {
     opacity: 0.6;
@@ -311,6 +330,9 @@ body {
 
   .header__top-search {
     order: 1;
+  }
+  .header__top-search:hover::after {
+    bottom: -180%;
   }
 
   .header__burger {
@@ -366,6 +388,13 @@ body {
 
   .header__burger {
     width: 10%;
+  }
+
+  .header__top-search {
+    order: 1;
+  }
+  .header__top-search:hover::after {
+    width: 80%;
   }
 }
 /*main--------------------*/
@@ -656,6 +685,22 @@ footer {
 .footer__middle-col1-label:hover {
   opacity: 0.6;
 }
+.footer__middle-col1-label:hover::before {
+  width: 50%;
+  height: 35px;
+  content: "Введите email addres";
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 8px 2px;
+  position: absolute;
+  z-index: 11;
+  right: 0;
+  transform: translateY(300%);
+  background: #8a817b;
+  border-radius: 3%;
+  color: #fff;
+}
 .footer__middle-col1-label::after {
   content: "";
   position: absolute;
@@ -792,5 +837,9 @@ footer {
   .footer__bottom-text {
     display: flex;
     flex-direction: column;
+  }
+
+  .footer__middle-col1-label:hover::before {
+    width: 60%;
   }
 }

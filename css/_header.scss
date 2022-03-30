@@ -34,6 +34,25 @@
         &-svg{
           position: absolute;
           cursor: pointer;
+          
+        }
+        transition: all 1s;
+        &:hover::after{
+          width: 75%;
+          height: 35px;
+          content: 'Введите запрос';
+          font-family: "Open Sans", sans-serif;
+          font-size: 14px;
+          text-align: center;
+          padding: 8px 2px;
+          position: absolute;
+          z-index: 11;
+          left: -10px;
+          right: 0;
+          bottom: -200%;
+          background: #8a817b;
+          border-radius: 3%;
+          color: $color-white;
         }
       .header__input {
         padding-left: 19px;
@@ -204,16 +223,16 @@
       background-color: rgb(151, 139, 130);
       
       .header__list{
-        position: absolute;
-        right: 0;
-        margin-top: 5px;
-        display: flex;
         flex-direction: column;
         justify-content: start;
+        text-align: center;
+        margin: 30px auto;
+
         .header__item{
-          margin-bottom: 10px;
+          margin-bottom: 25px;
+
           .header__link{
-            
+            margin: 0 auto; 
             // color: rgb(228, 198, 176);
             &:hover{
               opacity: 0.6;
@@ -241,6 +260,9 @@
   }
   .header__top-search {
     order: 1;
+    &:hover::after{
+      bottom: -180%;
+    }
   }
   
   .header__burger {
@@ -301,5 +323,11 @@
   }
   .header__burger {
     width: 10%;
+  }
+  .header__top-search {
+    order: 1;
+    &:hover::after{
+      width: 80%;
+    }
   }
 }
