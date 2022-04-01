@@ -31,29 +31,29 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-        &-svg{
-          position: absolute;
-          cursor: pointer;
-          
-        }
-        transition: all 1s;
-        &:hover::after{
-          width: 75%;
-          height: 35px;
-          content: 'Введите запрос';
-          font-family: "Open Sans", sans-serif;
-          font-size: 14px;
-          text-align: center;
-          padding: 8px 2px;
-          position: absolute;
-          z-index: 11;
-          left: -10px;
-          right: 0;
-          bottom: -200%;
-          background: #8a817b;
-          border-radius: 3%;
-          color: $color-white;
-        }
+      &-svg {
+        position: absolute;
+        cursor: pointer;
+      }
+      transition: all 1s;
+      &:hover::after {
+        width: 75%;
+        height: 35px;
+        content: "Введите запрос";
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        text-align: center;
+        padding: 8px 2px;
+        position: absolute;
+        z-index: 11;
+        left: -10px;
+        right: 0;
+        bottom: -200%;
+        background: #4e4946;
+        border-radius: 3%;
+        color: $color-white;
+        opacity: 0.6;
+      }
       .header__input {
         padding-left: 19px;
         &.value {
@@ -207,7 +207,7 @@
   // .toogle{
   //   transform: translateY(10%);
   // }
-  .header__top{
+  .header__top {
     position: relative;
     transition: all 0.3s ease 0s;
     .header__nav {
@@ -221,33 +221,33 @@
       height: 50vh;
       // background-color: $color-white;
       background-color: rgb(151, 139, 130);
-      
-      .header__list{
+
+      .header__list {
         flex-direction: column;
         justify-content: start;
         text-align: center;
         margin: 30px auto;
 
-        .header__item{
+        .header__item {
           margin-bottom: 25px;
 
-          .header__link{
-            margin: 0 auto; 
+          .header__link {
+            margin: 0 auto;
             // color: rgb(228, 198, 176);
-            &:hover{
+            &:hover {
               opacity: 0.6;
               color: rgb(31, 28, 26);
             }
           }
         }
       }
-      &.active{
+      &.active {
         // transform: translateY(10%);
         top: 35px;
       }
     }
   }
-  
+
   .header__title-box {
     .title-box {
       &__svg {
@@ -260,11 +260,11 @@
   }
   .header__top-search {
     order: 1;
-    &:hover::after{
+    &:hover::after {
       bottom: -180%;
     }
   }
-  
+
   .header__burger {
     cursor: pointer;
     order: 2;
@@ -326,7 +326,7 @@
   }
   .header__top-search {
     order: 1;
-    &:hover::after{
+    &:hover::after {
       width: 80%;
     }
   }
