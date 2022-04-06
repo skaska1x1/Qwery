@@ -1,22 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap");
 @import "./_reset";
 
 $color-white: #fff;
 $color-black: #000;
-$color-title-text: #FFC178;
+$color-title-text: #ffc178;
 
-body{
-    font-family: 'Open Sans', sans-serif;
-    // font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    background-color: $color-black;
-    color: $color-white;
+body {
+  font-family: "Open Sans", sans-serif;
+  // font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  background-color: $color-black;
+  color: $color-white;
 }
+
+//upward
+@import "./upward";
 
 //header
 @import "./header";
-
 
 //main
 @import "./_main";
