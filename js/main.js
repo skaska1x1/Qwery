@@ -12,7 +12,7 @@ let btnScrollDown = document.querySelector("#header__scroll-svg");
 // });
 
 function scrollDown() {
-  let windowCoords = 1400;
+  let windowCoords = 1600;
   // let windowCoords = document.documentElement.clientHeight;
   (function scroll() {
     if (window.scrollY < windowCoords) {
